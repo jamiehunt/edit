@@ -10,7 +10,7 @@
 
 > How important is using an adblocker?
 
-Piracy sites usually contain ads, some of which can be harmful, often leading to unwanted pages or fake download buttons. Real download buttons are usually small, and match the sites design, while fake ones are often big and eye-catching. It can be hard to tell them apart, so it's important to always have an adblocker.
+Piracy sites usually contain ads, some of which can be harmful, often leading to unwanted pages or fake download buttons. Real download buttons are usually small, often text-based or subtly integrated into the site's design. Fake ones are frequently large, brightly coloured, use generic terms like 'Download Now', and may appear multiple times on a page. It can be hard to tell them apart, so it's important to always have an adblocker.
 
 For browsers we recommend **[uBO](https://github.com/gorhill/uBlock)**, and you can also use a **[Redirect Skipper](https://fmhy.net/internet-tools#redirect-bypass)** to skip annoying countdowns.
 
@@ -24,7 +24,7 @@ For mobile **[AdGuard Premium](https://fmhy.net/android-iosguide#android-adblock
 
 > Which web browser should I use?
 
-We recommend **[Firefox](https://www.mozilla.org/en-US/firefox/new/)**, but you can also try **[Privacy-Focused Browsers](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/adblock-vpn-privacy/#wiki_.25B7_browser_privacy)**, or **[Brave](https://brave.com/)** if you prefer Chromium.
+We recommend **[Firefox](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/internet-tools/#wiki_.25B7_firefox_tools)**, but you can also try **[Privacy-Focused Browsers](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/adblock-vpn-privacy/#wiki_.25B7_browser_privacy)** or **[Brave](https://brave.com/)** if you prefer Chromium.
 
 For Android we recommend **[Firefox](https://www.mozilla.org/en-US/firefox/browsers/mobile/android/)**, **[Brave](https://brave.com/)** or **[Cromite](https://github.com/uazo/cromite)**.
 
@@ -36,9 +36,9 @@ For iOS **[Orion](https://kagi.com/orion/)**, [Brave](https://brave.com/) or Saf
 
 ### Movies / Shows
 
-* **Streaming: [Hexa](https://hexa.watch/) / [XPrime](https://xprime.tv/)**
+* **Streaming: [movie-web](https://erynith.github.io/movie-web-instances/) / [Cineby](https://www.cineby.app/) / [Hexa](https://hexa.watch/)**
 * **Torrenting: [1337x](https://1337x.to/movie-library/1/)**
-* **Sports Streaming: [Streamed](https://streamed.su/) / [Sportsurge](https://v2.sportsurge.net/home4/)**
+* **Sports Streaming: [Streamed](https://streamed.su/) / [WatchSports](https://watchsports.to/)**
 * **Drama Streaming: [KissAsian](https://kissasian.video/)**
 * **Track / Discover: [Trakt](https://trakt.tv/) / [Simkl](https://simkl.com/) / [Letterboxd](https://letterboxd.com/)**
 
@@ -46,7 +46,7 @@ For iOS **[Orion](https://kagi.com/orion/)**, [Brave](https://brave.com/) or Saf
 
 ### Anime
 
-* **Streaming: [AnimeKai](https://animekai.to/home) / [Miruro](https://www.miruro.com/) / [HiAnime](https://hianimez.to/)**
+* **Streaming: [AnimeKai](https://animekai.to/) / [Miruro](https://www.miruro.com/) / [HiAnime](https://hianime.to/)**
 * **Downloading: [Tokyo Insider](https://www.tokyoinsider.com/) / [Hi10Anime](https://hi10anime.com/)**
 * **Torrenting: [Nyaa](https://nyaa.si/) / [Miru](https://miru.watch/)**
 * **Track / Discover: [MyAnimeList](https://myanimelist.net/) / [AniList](https://anilist.co/)**
@@ -56,8 +56,8 @@ For iOS **[Orion](https://kagi.com/orion/)**, [Brave](https://brave.com/) or Saf
 ### Music
 
 * **Streaming: [SpotX](https://github.com/SpotX-Official/SpotX) / [Custom YouTube Music](https://th-ch.github.io/youtube-music/)**
-* **Downloading: [lucida](https://lucida.to/) / [Soulseek](https://slsknet.org/)**
-* **Mobile: [ReVanced Manager](https://revanced.app/) (Android) / [OuterTune](https://github.com/OuterTune/OuterTune) (Android) / [EeveeSpotify](https://github.com/whoeevee/EeveeSpotify) (iOS)**
+* **Downloading: [DoubleDouble](https://doubledouble.top/) / [Soulseek](https://slsknet.org/)**
+* **Mobile: [ReVanced Manager](https://revanced.app/) (Android) / [Metrolist](https://github.com/mostafaalagamy/metrolist) (Android) / [EeveeSpotify](https://github.com/whoeevee/EeveeSpotify) (iOS)**
 * **Track / Discover: [Last.fm](https://www.last.fm/home) / [RateYourMusic](https://rateyourmusic.com/)**
 
 ***
@@ -73,7 +73,7 @@ For iOS **[Orion](https://kagi.com/orion/)**, [Brave](https://brave.com/) or Saf
 
 ### Reading
 
-* **Downloading: [Anna's Archive](https://annas-archive.org/) / [Library Genesis](https://libgen.rs/) / [Z-Library](https://z-lib.gd/) / [Mobilism](https://forum.mobilism.org)**
+* **Downloading: [Anna's Archive](https://annas-archive.org/) / [Library Genesis](https://libgen.rs/) / [Z-Library](https://z-lib.gd/) / [Bookracy](https://bookracy.ru/)**
 * **Audiobooks: [AudiobookBay](https://audiobookbay.lu/) / [Mobilism Audiobooks](https://forum.mobilism.org/viewforum.php?f=124) / [Tokybook](https://tokybook.com/)**
 * **Manga: [ComicK](https://comick.io/) / [Weeb Central](https://weebcentral.com/) / [MangaDex](https://mangadex.org/)**
 * **Comics: [ReadComicsOnline](https://readcomiconline.li/) / [GetComics](https://getcomics.org/)**
@@ -99,7 +99,7 @@ Before installing any file, it's recommended to scan the setup / install with **
 
 Privacy is about controlling your personal information, not just keeping things secret. Non-sensitive data is used by companies to track your behavior, target ads, and influence your choices.
 
-For email privacy, we recommend **[Proton](https://proton.me/mail)** and for search **[SearX](https://searx.nixnet.services/)**. It's also good to check sites like **[HaveIBeenPwned](https://haveibeenpwned.com/Passwords)** to make sure your info hasn't been part of any recent data breaches.
+For email privacy, we recommend **[Proton](https://proton.me/mail)** and for search **[SearX](https://searx.fmhy.net/)**. It's also good to check sites like **[HaveIBeenPwned](https://haveibeenpwned.com/Passwords)** to make sure your info hasn't been part of any recent data breaches.
 
 !!!note It's best *not* to use your main email or password when you sign up for piracy sites. It's good to use a different password on every site you register for, that way if a breach happens, only the password for that one site is compromised. You can also use email [aliasing](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/internet-tools/#wiki_.25B7_email_aliasing).
 
@@ -111,12 +111,13 @@ For email privacy, we recommend **[Proton](https://proton.me/mail)** and for sea
 
 > How can I download / activate Windows for free?
 
-Download an ISO from Massgrave's **[Genuine Installation Media](https://massgrave.dev/genuine-installation-media)** page, and follow the **[Clean Install Windows Guide](https://gravesoft.dev/clean_install_windows)** to install it. After install, activate it with **[Microsoft Activation Scripts](https://massgrave.dev/)**.
+Download an ISO from Massgrave's **[Genuine Installation Media](https://massgrave.dev/genuine-installation-media)** page, and follow the **[Clean Install Windows Guide](https://gravesoft.dev/clean_install_windows)** to install it. After install, activate it with **[Microsoft Activation Scripts](https://massgrave.dev/)**. If you'd like to use Windows 10 past its End-Of-Life date, follow **[Windows 10 After EOL](https://massgrave.dev/windows10_eol)**.
 
+* **[Windows Install / Debloat Guide](https://gist.github.com/VVispy/17b228cd9c151a495e7576255e1713b9)**
 * **Software Piracy: [CRACKSurl](https://cracksurl.com/) / [LRepacks](https://lrepacks.net/)**
-* **Adobe Piracy: [m0nkrus](https://w16.monkrus.ws/) / [2](https://vk.com/monkrus) / [3](https://monkrus.dvuzu.com/)**
+* **Adobe Piracy: [Adobe Quick Guide](https://rentry.co/FMHYBase64#adobe-guide)**
 
-!!!note Be aware that people have been known to steal from M0nkrus and upload altered versions of their apps that contain harmful elements. Always double-check that you're on the official site before downloading anything.
+!!!note Be aware that unofficial sources often re-upload M0nkrus's repacks, sometimes with added malware. Always verify you are downloading from M0nkrus's actual site, which we link on FMHY before downloading anything. Do not trust search engine results blindly for such specific repackers.
 
 ***
 
@@ -124,7 +125,7 @@ Download an ISO from Massgrave's **[Genuine Installation Media](https://massgrav
 
 > Do I need a VPN to torrent?
 
-Downloading files through torrenting can cause issues with your ISP, so using a **[VPN](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/adblock-vpn-privacy#wiki_.25BA_vpn)** is a must in most countries. You should also **[bind your VPN](https://redd.it/ssy8vv)** to your torrent client to avoid leaks from accidental disconnects. You can also use **[Remote Torrenting Services](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/torrent#wiki_.25B7_remote_torrenting)** to avoid the need for a VPN altogether.
+Downloading files through torrenting can cause issues with your ISP, so using a **[VPN](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/adblock-vpn-privacy#wiki_.25BA_vpn)** is a must in most countries. You should also **[bind your VPN](https://gist.github.com/VVispy/765c6723436f386ef113040f8fc968b8)** to your torrent client. This ensures that if your VPN connection drops, your torrent client stops all traffic, preventing your real IP address from being exposed. You can also use **[Remote Torrenting Services](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/torrent#wiki_.25B7_remote_torrenting)** to avoid the need for a VPN altogether.
 
 > What is Port Forwarding? Do I need it?
 
