@@ -1,6 +1,17 @@
 <script setup lang="ts">
 import { colors } from '@fmhy/colors'
 import { useStorage, useStyleTag } from '@vueuse/core'
+import {
+  SelectContent,
+  SelectItem,
+  SelectItemIndicator,
+  SelectItemText,
+  SelectPortal,
+  SelectRoot,
+  SelectTrigger,
+  SelectValue,
+  SelectViewport
+} from 'reka-ui'
 import { watch } from 'vue'
 
 const colorScales = [
@@ -22,7 +33,7 @@ const selectedColor = useStorage<ColorNames>('preferred-color', 'swarm')
 
 const colorOptions = Object.keys(colors).filter(
   (key) => typeof colors[key as keyof typeof colors] === 'object'
-) as Array<ColorNames>
+)
 
 const { css } = useStyleTag('', { id: 'brand-color' })
 
@@ -60,29 +71,44 @@ watch(selectedColor, updateThemeColor)
 const normalizeColorName = (colorName: string) =>
   colorName.replaceAll(/-/g, ' ').charAt(0).toUpperCase() +
   colorName.slice(1).replaceAll(/-/g, ' ')
+
+const handleColorChange = (value: string) => {
+  selectedColor.value = value as ColorNames
+}
 </script>
 
 <template>
-  <div>
-    <div class="flex flex-wrap gap-2">
-      <div v-for="color in colorOptions" :key="color">
-        <button
-          :class="[
-            'inline-block w-6 h-6 rounded-full transition-all duration-200'
-          ]"
-          @click="selectedColor = color"
-          :title="normalizeColorName(color)"
-        >
-          <span
-            class="inline-block w-6 h-6 rounded-full"
-            :style="{ backgroundColor: colors[color][500] }"
-          />
-        </button>
-      </div>
-    </div>
+  <div class="color-picker">
+    <SelectRoot :model-value="selectedColor" @update:model-value="handleColorChange">
+      <SelectTrigger
+        class="inline-flex items-center justify-between px-3 py-2 text-sm bg-bg-alt border border-div rounded-md hover:bg-bg-elv transition-colors min-w-[180px] mx-auto align-left"
+        aria-label="Select theme color">
+        <div class="flex items-center gap-2">
+          <span class="inline-block w-4 h-4 rounded-full border border-div"
+            :style="{ backgroundColor: colors[selectedColor][500] }" />
+          <SelectValue :placeholder="normalizeColorName(selectedColor)" />
+        </div>
+        <span class="i-lucide:chevron-down w-4 h-4 text-text-2" />
+      </SelectTrigger>
 
-    <div class="mt-2 text-sm text-$vp-c-text-2">
-      Selected: {{ normalizeColorName(selectedColor) }}
-    </div>
+      <SelectPortal>
+        <SelectContent class="bg-bg-elv border border-div rounded-md shadow-lg z-50 max-h-60 overflow-hidden z-9999"
+          :side-offset="4">
+          <SelectViewport class="p-1">
+            <SelectItem v-for="color in colorOptions" :key="color" :value="color"
+              class="relative flex items-center gap-2 px-3 py-2 text-sm cursor-pointer hover:bg-bg-alt rounded-sm outline-none data-[highlighted]:bg-bg-alt data-[state=checked]:bg-bg-alt data-[state=checked]:text-text">
+              <span class="inline-block w-4 h-4 rounded-full border border-div"
+                :style="{ backgroundColor: colors[color][500] }" />
+              <SelectItemText>
+                {{ normalizeColorName(color) }}
+              </SelectItemText>
+              <SelectItemIndicator class="absolute right-2">
+                <span class="i-lucide:check w-4 h-4 text-text-2" />
+              </SelectItemIndicator>
+            </SelectItem>
+          </SelectViewport>
+        </SelectContent>
+      </SelectPortal>
+    </SelectRoot>
   </div>
 </template>

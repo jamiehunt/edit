@@ -1,9 +1,27 @@
 <script setup lang="ts">
+import { BProgress } from '@bprogress/core'
 import DefaultTheme from 'vitepress/theme'
 import Announcement from './components/Announcement.vue'
 import Sidebar from './components/SidebarCard.vue'
 
+import '@bprogress/core/css'
+
 const { isDark } = useData()
+
+const router = useRouter()
+
+BProgress.configure({
+  showSpinner: false,
+  easing: 'ease'
+})
+
+router.onBeforeRouteChange = () => {
+  BProgress.start()
+}
+
+router.onAfterRouteChange = () => {
+  BProgress.done()
+}
 
 const enableTransitions = () =>
   'startViewTransition' in document &&
@@ -23,7 +41,6 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     )}px at ${x}px ${y}px)`
   ]
 
-  // @ts-expect-error
   await document.startViewTransition(async () => {
     isDark.value = !isDark.value
     await nextTick()
@@ -61,6 +78,10 @@ const { Layout } = DefaultTheme
 </template>
 
 <style>
+:root {
+  --bprogress-color: var(--vp-c-brand);
+}
+
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;
