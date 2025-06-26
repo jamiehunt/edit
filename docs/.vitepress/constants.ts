@@ -155,7 +155,7 @@ export const nav: DefaultTheme.NavItem[] = [
       { text: '🚀 Startpage', link: 'https://fmhy.net/startpage' },
       { text: '📋 snowbin', link: 'https://pastes.fmhy.net' },
       {
-        text: '®️ Redlib',
+        text: '® Redlib',
         link: 'https://redlib.fmhy.net/r/FREEMEDIAHECKYEAH/wiki/index'
       },
       { text: '🔎 SearXNG', link: 'https://searx.fmhy.net/' },
@@ -178,19 +178,7 @@ export const nav: DefaultTheme.NavItem[] = [
   }
 ]
 
-export const sidebar: DefaultTheme.Sidebar | DefaultTheme.NavItemWithLink[] = [
-  {
-    text: '<span class="i-twemoji:books"></span> Beginners Guide',
-    link: '/beginners-guide'
-  },
-  {
-    text: '<span class="i-twemoji:newspaper"></span> Posts',
-    link: '/posts'
-  },
-  {
-    text: '<span class="i-twemoji:light-bulb"></span> Contribute',
-    link: '/other/contributing'
-  },
+export const wikiSidebar = [
   {
     text: 'Wiki',
     collapsed: false,
@@ -305,9 +293,9 @@ export const sidebar: DefaultTheme.Sidebar | DefaultTheme.NavItemWithLink[] = [
     items: [
       meta.build.nsfw
         ? {
-            text: '<span class="i-twemoji:no-one-under-eighteen"></span> NSFW',
-            link: 'https://rentry.co/NSFW-Checkpoint'
-          }
+          text: '<span class="i-twemoji:no-one-under-eighteen"></span> NSFW',
+          link: 'https://rentry.co/NSFW-Checkpoint'
+        }
         : {},
       {
         text: '<span class="i-twemoji:warning"></span> Unsafe Sites',
@@ -319,4 +307,22 @@ export const sidebar: DefaultTheme.Sidebar | DefaultTheme.NavItemWithLink[] = [
       }
     ]
   }
+]
+
+export const beginnersGuideItem: DefaultTheme.NavItemWithLink = {
+  text: '<span class="i-twemoji:books"></span> Beginners Guide',
+  link: '/beginners-guide'
+}
+
+export const sidebar: DefaultTheme.Sidebar | DefaultTheme.NavItemWithLink[] = [
+  beginnersGuideItem,
+  {
+    text: '<span class="i-twemoji:newspaper"></span> Posts',
+    link: '/posts'
+  },
+  {
+    text: '<span class="i-twemoji:light-bulb"></span> Contribute',
+    link: '/other/contributing'
+  },
+  ...wikiSidebar
 ]

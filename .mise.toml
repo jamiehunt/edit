@@ -1,6 +1,6 @@
 # https://github.com/vitejs/vite/issues/17291
 [tools]
-node = "21"
+node = "latest"
 
 [tasks]
 d = "nrr docs:dev --host"
