@@ -4,6 +4,7 @@ import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import OptimizeExclude from 'vite-plugin-optimize-exclude'
 import Terminal from 'vite-plugin-terminal'
+import vueDevtools from 'vite-plugin-vue-devtools'
 import { defineConfig } from 'vitepress'
 import {
   commitRef,
@@ -94,11 +95,18 @@ export default defineConfig({
           replacement: fileURLToPath(
             new URL('./theme/Appearance.vue', import.meta.url)
           )
+        },
+        {
+          find: /^.*VPButton\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/VPButton.vue', import.meta.url)
+          )
         }
       ]
     },
     optimizeDeps: { exclude: ['workbox-window'] },
     plugins: [
+      vueDevtools(),
       OptimizeExclude(),
       Terminal({
         console: 'terminal',
