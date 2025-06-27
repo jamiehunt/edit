@@ -1,5 +1,3 @@
-import { meta } from '../constants'
-
 /**
  *  Copyright (c) 2025 taskylizard. Apache License 2.0.
  *
@@ -143,7 +141,7 @@ export const excluded = [
   'startpage.md'
 ]
 
-export function getHeader(id: string) {
+export function getHeader(meta: { build: { api: boolean } }, id: string) {
   const title =
     '<div class="space-y-2 not-prose"><h1 class="text-4xl font-extrabold tracking-tight text-primary underline lg:text-5xl lg:leading-[3.5rem]">'
 

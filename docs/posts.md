@@ -9,7 +9,7 @@ sidebar: true
 ---
 
 <script setup>
-import Index from './.vitepress/theme/Posts.vue'
+import Index from '../website/theme/Posts.vue'
 </script>
 
 <Index/>

@@ -19,7 +19,7 @@ import { basename } from 'pathe'
 import { excluded, getHeader } from './transformer/constants'
 import { replaceUnderscore, transformer } from './transformer/core'
 
-export function transformsPlugin(): Plugin {
+export function transformsPlugin(meta: { build: { api: boolean } }): Plugin {
   return {
     name: 'custom:transform-content',
     enforce: 'pre',
@@ -33,7 +33,7 @@ export function transformsPlugin(): Plugin {
         !id.includes('posts') &&
         !id.includes('other')
       ) {
-        const header = getHeader(_id)
+        const header = getHeader(meta, _id)
         const contents = transform(code)
 
         if (_id === 'beginners-guide.md') {

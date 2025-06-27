@@ -16,7 +16,7 @@
 
 import type { DefaultTheme } from 'vitepress'
 import consola from 'consola'
-import { transform, transformGuide } from './transformer'
+import { transform, transformGuide } from '../../website/transformer'
 
 // @unocss-include
 

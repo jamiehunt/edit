@@ -6,6 +6,11 @@ import OptimizeExclude from 'vite-plugin-optimize-exclude'
 import Terminal from 'vite-plugin-terminal'
 import vueDevtools from 'vite-plugin-vue-devtools'
 import { defineConfig } from 'vitepress'
+import { generateFeed, generateImages, generateMeta } from '../../website/hooks'
+import { defs, emojiRender, movePlugin } from '../../website/markdown/emoji'
+import { headersPlugin } from '../../website/markdown/headers'
+import { toggleStarredPlugin } from '../../website/markdown/toggle-starred'
+import { transformsPlugin } from '../../website/transformer'
 import {
   commitRef,
   feedback,
@@ -16,11 +21,6 @@ import {
   sidebar,
   socialLinks
 } from './constants'
-import { generateFeed, generateImages, generateMeta } from './hooks'
-import { defs, emojiRender, movePlugin } from './markdown/emoji'
-import { headersPlugin } from './markdown/headers'
-import { toggleStarredPlugin } from './markdown/toggleStarred'
-import { transformsPlugin } from './transformer'
 
 // @unocss-include
 
@@ -82,7 +82,7 @@ export default defineConfig({
   transformHead: async (context) => generateMeta(context, meta.hostname),
   buildEnd: async (context) => {
     generateImages(context)
-      .then(() => generateFeed(context))
+      .then(() => generateFeed(meta, context))
       .finally(() => consola.success('Success!'))
   },
   vite: {
@@ -97,13 +97,16 @@ export default defineConfig({
         {
           find: /^.*VPSwitchAppearance\.vue$/,
           replacement: fileURLToPath(
-            new URL('./theme/Appearance.vue', import.meta.url)
+            new URL('../../website/theme/Appearance.vue', import.meta.url)
           )
         },
         {
           find: /^.*VPButton\.vue$/,
           replacement: fileURLToPath(
-            new URL('./theme/components/VPButton.vue', import.meta.url)
+            new URL(
+              '../../website/theme/components/VPButton.vue',
+              import.meta.url
+            )
           )
         }
       ]
@@ -128,7 +131,7 @@ export default defineConfig({
           filepath: './.cache/imports.json'
         }
       }),
-      transformsPlugin(),
+      transformsPlugin(meta),
       {
         name: 'custom:adjust-order',
         configResolved(c) {

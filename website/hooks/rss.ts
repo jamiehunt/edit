@@ -20,9 +20,11 @@ import path from 'node:path'
 import consola from 'consola'
 import { Feed } from 'feed'
 import { createContentLoader } from 'vitepress'
-import { meta } from '../constants'
 
-export async function generateFeed(config: SiteConfig): Promise<void> {
+export async function generateFeed(
+  meta: { hostname: string; description: string },
+  config: SiteConfig
+) {
   const feed: Feed = new Feed({
     id: meta.hostname,
     link: meta.hostname,

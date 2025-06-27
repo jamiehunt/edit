@@ -3,7 +3,10 @@
     "verbatimModuleSyntax": true,
     "module": "esnext",
     "target": "esnext",
-    "lib": ["DOM", "ESNext"],
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
     "strict": true,
     "jsx": "preserve",
     "esModuleInterop": true,
@@ -13,10 +16,19 @@
     "noUnusedLocals": true,
     "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["vitepress"]
+    "types": [
+      "vitepress"
+    ]
   },
-  "exclude": ["node_modules"],
+  "exclude": [
+    "node_modules"
+  ],
   "include": [
+    "website/**/*.ts",
+    "website/**/*.d.ts",
+    "website/**/*.vue",
+    "website/**/*.mts",
+    "website/**/*.json",
     "**/.vitepress/**/*.ts",
     "**/.vitepress/**/*.mts",
     "**/.vitepress/**/*.vue",

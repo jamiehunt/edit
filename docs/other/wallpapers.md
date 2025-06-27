@@ -6,7 +6,7 @@ prev: false
 ---
 
 <script setup>
-import WallpaperCard from '../.vitepress/theme/components/WallpaperCard.vue'
+import WallpaperCard from '../../website/theme/components/WallpaperCard.vue'
 </script>
 
 # Wallpapers
