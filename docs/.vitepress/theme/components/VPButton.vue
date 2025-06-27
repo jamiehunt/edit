@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from 'vue'
-import { wikiSidebar as homepageItems } from '../../constants'
 
 const KNOWN_EXTENSIONS = new Set()
 
@@ -11,18 +10,18 @@ function treatAsHtml(filename: string): boolean {
       (import.meta as any).env?.VITE_EXTRA_EXTENSIONS ||
       ''
 
-    // md, html? are intentionally omitted
-    ;(
-      '3g2,3gp,aac,ai,apng,au,avif,bin,bmp,cer,class,conf,crl,css,csv,dll,' +
-      'doc,eps,epub,exe,gif,gz,ics,ief,jar,jpe,jpeg,jpg,js,json,jsonld,m4a,' +
-      'man,mid,midi,mjs,mov,mp2,mp3,mp4,mpe,mpeg,mpg,mpp,oga,ogg,ogv,ogx,' +
-      'opus,otf,p10,p7c,p7m,p7s,pdf,png,ps,qt,roff,rtf,rtx,ser,svg,t,tif,' +
-      'tiff,tr,ts,tsv,ttf,txt,vtt,wav,weba,webm,webp,woff,woff2,xhtml,xml,' +
-      'yaml,yml,zip' +
-      (extraExts && typeof extraExts === 'string' ? ',' + extraExts : '')
-    )
-      .split(',')
-      .forEach((ext) => KNOWN_EXTENSIONS.add(ext))
+      // md, html? are intentionally omitted
+      ; (
+        '3g2,3gp,aac,ai,apng,au,avif,bin,bmp,cer,class,conf,crl,css,csv,dll,' +
+        'doc,eps,epub,exe,gif,gz,ics,ief,jar,jpe,jpeg,jpg,js,json,jsonld,m4a,' +
+        'man,mid,midi,mjs,mov,mp2,mp3,mp4,mpe,mpeg,mpg,mpp,oga,ogg,ogv,ogx,' +
+        'opus,otf,p10,p7c,p7m,p7s,pdf,png,ps,qt,roff,rtf,rtx,ser,svg,t,tif,' +
+        'tiff,tr,ts,tsv,ttf,txt,vtt,wav,weba,webm,webp,woff,woff2,xhtml,xml,' +
+        'yaml,yml,zip' +
+        (extraExts && typeof extraExts === 'string' ? ',' + extraExts : '')
+      )
+        .split(',')
+        .forEach((ext) => KNOWN_EXTENSIONS.add(ext))
   }
 
   const ext = filename.split('.').pop()
@@ -52,12 +51,12 @@ function normalizeLink(url: string): string {
     pathname.endsWith('/') || pathname.endsWith('.html')
       ? url
       : url.replace(
-          /(?:(^\.+)\/)?.*$/,
-          `$1${pathname.replace(
-            /(\.md)?$/,
-            site.value.cleanUrls ? '' : '.html'
-          )}${search}${hash}`
-        )
+        /(?:(^\.+)\/)?.*$/,
+        `$1${pathname.replace(
+          /(\.md)?$/,
+          site.value.cleanUrls ? '' : '.html'
+        )}${search}${hash}`
+      )
 
   return withBase(normalizedPath)
 }
@@ -114,7 +113,7 @@ onUnmounted(() => {
 })
 
 const processedItems = computed(() => {
-  return homepageItems.map((item: any) => {
+  return FMHY_HOMEPAGE_ITEMS.map((item: any) => {
     if ('items' in item && item.items) {
       return {
         ...item,
@@ -135,26 +134,15 @@ const processedItems = computed(() => {
 <template>
   <div v-if="theme === 'brand'" class="VPButtonDropdown" ref="dropdownRef">
     <div class="VPButtonWrapper">
-      <component
-        :is="component"
-        class="VPButton VPButtonMain"
-        :class="[size, theme]"
-        :href="href ? normalizeLink(href) : undefined"
-        :target="props.target ?? (isExternal ? '_blank' : undefined)"
-        :rel="props.rel ?? (isExternal ? 'noreferrer' : undefined)"
-      >
+      <component :is="component" class="VPButton VPButtonMain" :class="[size, theme]"
+        :href="href ? normalizeLink(href) : undefined" :target="props.target ?? (isExternal ? '_blank' : undefined)"
+        :rel="props.rel ?? (isExternal ? 'noreferrer' : undefined)">
         <slot>{{ text }}</slot>
       </component>
       <button
-        class="bg-$vp-c-default-soft text-text border-$vp-c-default-soft hover:border-primary ml-3 inline-flex h-8 items-center justify-center whitespace-nowrap rounded-md border-2 border-solid px-2.5 py-4.5 text-sm font-medium transition-all duration-300 sm:h-7 VPButtonTrigger"
-        @click="toggleDropdown"
-        :aria-expanded="isDropdownOpen"
-        aria-label="Toggle dropdown menu"
-      >
-        <span
-          class="i-lucide:chevron-down"
-          :class="{ 'rotate-180': isDropdownOpen }"
-        ></span>
+        class="bg-$vp-c-default-soft text-text border-$vp-c-default-soft hover:border-primary ml-3 inline-flex h-8 items-center justify-center whitespace-nowrap rounded-md border-2 border-solid px-2.5 py-4.5 text-md font-medium transition-all duration-300 sm:h-7 VPButtonTrigger"
+        @click="toggleDropdown" :aria-expanded="isDropdownOpen" aria-label="Toggle dropdown menu">
+        <span class="i-lucide:menu"></span>
       </button>
     </div>
 
@@ -163,22 +151,12 @@ const processedItems = computed(() => {
         <template v-for="item in processedItems" :key="item.text">
           <div v-if="'items' in item" class="VPButtonDropdownSection">
             <div class="VPButtonDropdownSectionTitle" v-html="item.text"></div>
-            <a
-              v-for="subItem in item.items"
-              :key="subItem.text"
-              :href="subItem.link"
-              class="VPButtonDropdownItem"
-              @click="closeDropdown"
-            >
+            <a v-for="subItem in item.items" :key="subItem.text" :href="subItem.link" class="VPButtonDropdownItem"
+              @click="closeDropdown">
               <span v-html="subItem.displayText"></span>
             </a>
           </div>
-          <a
-            v-else
-            :href="item.link"
-            class="VPButtonDropdownItem"
-            @click="closeDropdown"
-          >
+          <a v-else :href="item.link" class="VPButtonDropdownItem" @click="closeDropdown">
             <span v-html="item.displayText"></span>
           </a>
         </template>
@@ -186,15 +164,9 @@ const processedItems = computed(() => {
     </div>
   </div>
 
-  <component
-    v-else
-    :is="component"
-    class="VPButton"
-    :class="[size, theme]"
-    :href="href ? normalizeLink(href) : undefined"
-    :target="props.target ?? (isExternal ? '_blank' : undefined)"
-    :rel="props.rel ?? (isExternal ? 'noreferrer' : undefined)"
-  >
+  <component v-else :is="component" class="VPButton" :class="[size, theme]"
+    :href="href ? normalizeLink(href) : undefined" :target="props.target ?? (isExternal ? '_blank' : undefined)"
+    :rel="props.rel ?? (isExternal ? 'noreferrer' : undefined)">
     <slot>{{ text }}</slot>
   </component>
 </template>

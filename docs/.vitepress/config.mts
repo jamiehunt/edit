@@ -9,6 +9,7 @@ import { defineConfig } from 'vitepress'
 import {
   commitRef,
   feedback,
+  wikiSidebar as homepageItems,
   meta,
   nav,
   search,
@@ -85,6 +86,9 @@ export default defineConfig({
       .finally(() => consola.success('Success!'))
   },
   vite: {
+    define: {
+      FMHY_HOMEPAGE_ITEMS: JSON.stringify(homepageItems)
+    },
     ssr: {
       noExternal: ['@fmhy/components']
     },

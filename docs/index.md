@@ -26,7 +26,7 @@ hero:
       text: Discord
       link: https://rentry.co/fmhy-invite
 
-fatures:
+features:
   - title: Adblocking / Privacy
     link: /adblockvpnguide
     details: Learn how to block ads, trackers and other nasty things.
