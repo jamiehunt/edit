@@ -332,7 +332,6 @@
 * ⭐ **[Arch Security Wiki](https://wiki.archlinux.org/title/Security)**, [Linux Hardening](https://vez.mrsk.me/linux-hardening.html) / [2](https://madaidans-insecurities.github.io/guides/linux-hardening.html) or [How to Secure a Linux Server](https://github.com/imthenachoman/How-To-Secure-A-Linux-Server) - Linux Security Guides
 * ⭐ **[SpoofDPI](https://github.com/xvzc/SpoofDPI)** or [zapret](https://github.com/bol-van/zapret) - DPI Circumvention
 * ⭐ **[CryptSetup](https://gitlab.com/cryptsetup/cryptsetup)**, [gocryptfs](https://nuetzlich.net/gocryptfs) / [GitHub](https://github.com/rfjakob/gocryptfs) or [Tomb](https://dyne.org/software/tomb/) - File Encryption
-* [Tails](https://tails.net/) or [Kodachi](https://www.digi77.com/linux-kodachi/) - Privacy-Based Operating System
 * [Securely Wipe Disk](https://wiki.archlinux.org/title/Securely_wipe_disk) or [SSD Memory Cell Clearing](https://wiki.archlinux.org/title/Solid_state_drive/Memory_cell_clearing) - Linux Disk Wipe Guides
 * [JShielder](https://github.com/Jsitech/JShielder) - Hardening Script for Linux Servers
 * [YouTubeUnblock](https://github.com/Waujito/youtubeUnblock) - YouTube DPI Circumvention
@@ -677,6 +676,7 @@
 * ⭐ **[AppleGamingWiki](https://applegamingwiki.com/)** - Mac Game Fixes / Compatibility
 * ⭐ **[Goldberg](https://github.com/inflation/goldberg_emulator)** - Steam Multiplayer Client Emulator
 * [SCNLOG](https://scnlog.me/) - Mac Games
+* [RuTracker](https://rutracker.org/forum/viewforum.php?f=960) - Mac Games
 * [Mac Source Ports](https://www.macsourceports.com/) - Run Old Mac Games
 * [HeroicGamesLauncher](https://heroicgameslauncher.com/) or [Mythic](https://getmythic.app/) / [Discord](https://discord.gg/58NZ7fFqPy) - Epic Games Launchers
 * [Prism43](https://github.com/DomHeadroom/Prism43) - Prism Launcher / Unlocker
@@ -786,7 +786,7 @@
 
 ## ▷ File Tools
 
-* ⭐ **[PeaZip](https://peazip.github.io/peazip-macos.html)**, [The Unarchiver](https://theunarchiver.com/), [unxip](https://github.com/saagarjha/unxip) or [Keka](https://www.keka.io/) - File Archivers
+* ⭐ **[PeaZip](https://peazip.github.io/peazip-macos.html)** / [GitHub](https://github.com/peazip/PeaZip/), [The Unarchiver](https://theunarchiver.com/), [unxip](https://github.com/saagarjha/unxip) or [Keka](https://www.keka.io/) - File Archivers
 * ⭐ **[Readdle](https://readdle.com/documents)** - Multipurpose File Tool
 * [Progress](https://github.com/Xfennec/progress) - Show Copied Data Progress
 * [Bruji](https://www.bruji.com/) - Media Cataloging Software Suite

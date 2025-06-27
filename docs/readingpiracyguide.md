@@ -480,7 +480,6 @@
 * [Wuxia.click](https://wuxia.click/)
 * [Ocean of EPUB](https://oceanofepub.net/) / Allows Downloads
 * [Novel Bin](https://novelbin.com/), [2](https://novelbin.me/)
-* [NobleMTL](https://noblemtl.com/)
 * [ReadNovelFull](https://readnovelfull.com)
 * [FreeWebNovel](https://freewebnovel.com/)
 * [Translated Light Novels](https://rentry.co/FMHYBase64#translated-light-novels) / Allows Downloads
@@ -595,6 +594,7 @@
 * [eBookRoom](https://t.me/eBookRoom)
 * [BookGoldMine](https://www.bookgoldmine.com/)
 * [SuperKuh](http://erewhon.superkuh.com/library/)
+* [⁠InfoBooks](https://www.infobooks.org/)
 * [Non-Fiction](https://vk.com/non_fic)
 * [FreePLRDownloads](https://freeplrdownloads.com/)
 * [E-Books Directory](https://www.e-booksdirectory.com/)

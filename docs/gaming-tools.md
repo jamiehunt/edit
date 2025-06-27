@@ -622,7 +622,7 @@
 
 * 🌐 **[ChunkBase](https://www.chunkbase.com/apps/)** - Minecraft Map Tools
 * [Amulet](https://www.amuletmc.com/), [Minecraft Datapack Map](https://map.jacobsjo.eu/) / [GitHub](https://github.com/jacobsjo/mc-datapack-map), [MCA Selector](https://github.com/Querz/mcaselector), [uNmINeD](https://unmined.net/) or [WorldPainter](https://www.worldpainter.net/) - Minecraft Map Editors / Viewers
-* [MineAtlas](http://mineatlas.com/), [Cubiomes Viewer](https://github.com/cubitect/cubiomes-viewer) or [MCSeeder](https://mcseeder.com/) - Minecraft Seeds
+* [MineAtlas](http://mineatlas.com/) or [Cubiomes Viewer](https://github.com/cubitect/cubiomes-viewer) - Minecraft Seeds
 * [MinecraftMaps](https://www.minecraftmaps.com/) or [Mapcraft](https://mapcraft.me/) - Minecraft Maps
 * [Minecraft Earth Map](https://earth.motfe.net/) - Earth Maps
 * [CTMRepository](https://ctmrepository.com/) - Complete the Monument Maps / [Discord](https://discord.com/invite/G2WVCB3)
@@ -705,7 +705,7 @@
 * [Ready or Not Doc](https://docs.google.com/spreadsheets/d/1d89lpFDA9lo_v13iBlnhtuA6DvuUnKfPaeo0d4RBGJ4/) - Ready or Not Info
 * [FM Moneyball](https://www.fmdatalab.com/tutorials/moneyball) - Football Manager Recruitment Tool / [Tutorial](https://youtu.be/vBoHCH-rZMI)
 * [WRCsetups](https://wrcsetups.com/) - WRC Setups
-* [Peacock](https://github.com/thepeacockproject/Peacock) - Hitman World of Assassination Server Replacement
+* [Peacock](https://thepeacockproject.org/) - Hitman World of Assassination Server Replacement / [GitHub](https://github.com/thepeacockproject/Peacock)
 * [Useful Osu](https://github.com/CarbonUwU/Useful-osu) - Osu! Resources
 * [Collection Manager](https://github.com/Piotrekol/CollectionManager) - Osu! Collection Manager
 * [osu trainer](https://github.com/FunOrange/osu-trainer) - Osu! Trainer
@@ -784,7 +784,7 @@
 
 * ⭐ **[CsWarzOnE](https://cswarzone.com/)** - Counter-Strike Downloads
 * ⭐ **[HLTV](https://www.hltv.org/)** or [Dust2](https://www.dust2.us/) - Counter-Strike News
-* ⭐ **[CS Demo Manager](https://cs-demo-manager.com/)** - Counter-Strike Demo manager
+* ⭐ **[CS Demo Manager](https://cs-demo-manager.com/)** - Counter-Strike Demo Manager
 * ⭐ **[Faceit](https://www.faceit.com/)** - Matchmaking Client
 * ⭐ **[CSNADES](https://csnades.gg/)** or [CS2Util](https://www.cs2util.com/) - CS2 Nade Lineups
 * [CSGO Trader](https://csgotrader.app/) - CS:GO Trading Enhancements

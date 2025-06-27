@@ -61,7 +61,7 @@
 * [Classical Music Only](https://classicalmusiconly.com/) or [musopen](https://musopen.org/music/) - Classical Music
 * [Bandcamp](https://bandcamp.com/discover/free-music) - Free Music Release Platform
 * [Mirlo](https://mirlo.space/) - Free Music Release Platform
-* [Newground Audio](https://www.newgrounds.com/audio) - User-Made Electronic Music
+* [Newgrounds Audio](https://www.newgrounds.com/audio) - User-Made Electronic Music
 * [Audius](https://audius.co/) - User Made Music
 * [AudionautiX](https://audionautix.com/) - Mood-Based Streaming
 * [Youtaite](https://www.youtaite.com/) - Youtaite Resources / Songs
@@ -961,6 +961,7 @@
 * [AirWindows](https://www.airwindows.com/) - Plugins / [Consolidated](https://www.airwindows.com/consolidated/)
 * [Krush](https://www.tritik.com/product/krush/) - Bitcrusher (Deep Fry) Plugin
 * [samplv1](https://samplv1.sourceforge.io/) - Voice Synth
+* [Oi, Grandad!](https://github.com/publicsamples/Oi-Grandad) - 4 Voice Granular Synth
 * [Chowdhury DSP](https://chowdsp.com/products.html) - Audio Signal Processing
 * [/r/SynthRecipes](https://www.reddit.com/r/synthrecipes/) - Synth Request Subreddit
 

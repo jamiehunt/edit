@@ -19,6 +19,7 @@
 * [Sbenny](https://sbenny.com/)
 * [farsroid](https://www.farsroid.com/)
 * [APKSum](https://www.apksum.com/)
+* [⁠Android Zone](https://android-zone.ws/)
 * [AndroidRepublic](https://androidrepublic.org/)
 * [Androeed](https://androeed.store/), [2](https://androeed.ru/) / [Telegram](https://t.me/androeed_store)
 * [AndroPalace](https://www.andropalace.org/) / [Telegram](https://telegram.me/officialandropalace)
@@ -498,7 +499,7 @@
 * ⭐ **[File-Manager](https://github.com/FossifyOrg/File-Manager)** - File Manager
 * ⭐ **[ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)** or [ZipXtract](https://github.com/WirelessAlien/ZipXtract) - File Archivers
 * ⭐ **[SyncThing Fork](https://github.com/Catfriend1/syncthing-android)** - File Sync
-* ⭐ **[pairdrop](https://pairdrop.net/)** - File Sharing / [GitHub](https://github.com/fm-sys/snapdrop-android)
+* ⭐ **[Pairdrop](https://pairdrop.net/)** - File Sharing / [GitHub](https://github.com/fm-sys/snapdrop-android)
 * ⭐ **[Cx File Explorer](https://play.google.com/store/apps/details?id=com.cxinventor.file.explorer)**, [Total Commander](https://www.ghisler.com/ce.htm), [FileNavigator](https://play.google.com/store/apps/details?id=com.w2sv.filenavigator) / [GitHub](https://github.com/w2sv/FileNavigator), [File Explorer Compose](https://github.com/Raival-e/File-Explorer-Compose) or [Xplore](https://play.google.com/store/apps/details?id=com.lonelycatgames.Xplore) - File Managers / Explorers
 * [Aria2App](https://github.com/devgianlu/Aria2App) - Download Manager Controller
 * [Round Sync](https://github.com/newhinton/Round-Sync) or [MetaCTRL](https://metactrl.com/) - Multi-Site Cloud Storage File Managers
@@ -652,7 +653,7 @@
 
 ***
 
-* 🌐 **[Emulators on Android](https://emulation.gametechwiki.com/index.php/Emulators_on_Android)**
+* 🌐 **[Emulators on Android](https://emulation.gametechwiki.com/index.php/Emulators_on_Android)** / [Frontends](https://emulation.gametechwiki.com/index.php/Emulators_on_Android#Launcher_Frontends)
 * 🌐 **[⁠EmuReady](https://www.emuready.com/)** - Mobile Game Emulation Compatibility / Info / [GitHub](https://github.com/Producdevity/EmuReady)
 * ⭐ **[Termux](https://termux.dev/)** - Terminal Emulator / [Matrix](https://matrix.to/#/#Termux:matrix.org) / [Telegram](https://telegram.me/termux24x7) / [Subreddit](https://www.reddit.com/r/termux) / [Discord](https://discord.gg/HXpF69X) / [GitHub](https://github.com/termux/)
 * ⭐ **Termux Tools** - [YT-DL](https://github.com/khansaad1275/Termux-YTD) / [GUI](https://github.com/termux/termux-gui) / [Beautify](https://github.com/mayTermux/myTermux)
