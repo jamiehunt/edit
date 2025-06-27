@@ -1,19 +1,3 @@
-/**
- *  Copyright (c) 2025 taskylizard. Apache License 2.0.
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *  http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 import type { ContentData, SiteConfig } from 'vitepress'
 import type { SatoriOptions } from 'x-satori/vue'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
@@ -88,14 +72,14 @@ async function generateImage({
   const _page = getPage(url)
   const title =
     frontmatter.layout === 'home'
-      ? (frontmatter.hero.name ?? frontmatter.title)
+      ? frontmatter.hero.name ?? frontmatter.title
       : frontmatter.title
         ? frontmatter.title
         : _page?.title
 
   const description =
     frontmatter.layout === 'home'
-      ? (frontmatter.hero.tagline ?? frontmatter.description)
+      ? frontmatter.hero.tagline ?? frontmatter.description
       : frontmatter.description
         ? frontmatter.description
         : _page?.description

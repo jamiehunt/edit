@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/require-v-for-key -->
 <script setup lang="ts">
-import { data as posts } from './posts.data'
+import { data } from './posts.data'
 
 const formatDate = (raw: string): string => {
   const date = new Date(raw)
@@ -9,6 +9,8 @@ const formatDate = (raw: string): string => {
     day: 'numeric'
   })
 }
+
+const posts: any = data
 </script>
 
 <template>

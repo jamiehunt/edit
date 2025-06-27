@@ -1,19 +1,3 @@
-/**
- *  Copyright (c) 2025 taskylizard. Apache License 2.0.
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *  http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 import consola from 'consola'
 
 type Transform = {
@@ -30,27 +14,28 @@ interface Replacer {
 }
 
 export const transformer = (text: string) => {
+  // prettier-ignore
   const handler: ProxyHandler<{ text: string }> = {
-    get(target: { text: string }, prop: string | symbol) {
-      if (prop === 'transform') {
-        return (name: string, transforms: Transform[]): Replacer => {
-          consola.debug(`Starting transform ${name} with ${transforms}`)
+		get(target: { text: string }, prop: string | symbol) {
+			if (prop === "transform") {
+				return (name: string, transforms: Transform[]): Replacer => {
+					consola.debug(`Starting transform ${name} with ${transforms}`);
 
-          transforms.forEach(({ name, find, replace }) => {
-            consola.debug(`Transforming ${name} with ${find}`)
-            target.text = target.text.replace(find, replace as any)
-          })
+					transforms.forEach(({ name, find, replace }) => {
+						consola.debug(`Transforming ${name} with ${find}`);
+						target.text = target.text.replace(find, replace as any);
+					});
 
-          // @ts-expect-error - Proxy is not typed
-          return proxy
-        }
-      }
-      if (prop === 'getText') {
-        return () => target.text
-      }
-      return Reflect.get(target, prop)
-    }
-  }
+					// @ts-expect-error - Proxy is not typed
+					return proxy;
+				};
+			}
+			if (prop === "getText") {
+				return () => target.text;
+			}
+			return Reflect.get(target, prop);
+		},
+	};
 
   const target = { text }
   const proxy = new Proxy(target, handler)
