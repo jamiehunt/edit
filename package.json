@@ -70,6 +70,7 @@
     "unplugin-auto-import": "^0.18.3",
     "vite-plugin-optimize-exclude": "^0.0.1",
     "vite-plugin-terminal": "^1.2.0",
+    "vite-plugin-vue-devtools": "^7.7.7",
     "vue-tsc": "^2.2.10",
     "wrangler": "^3.114.1"
   },
