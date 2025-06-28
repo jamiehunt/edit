@@ -134,24 +134,36 @@ const toggleCard = () => (isCardShown.value = !isCardShown.value)
 
 <template>
   <template v-if="props.heading">
-    <button @click="toggleCard()"
-      class="bg-$vp-c-default-soft text-primary border-$vp-c-default-soft hover:border-primary ml-3 inline-flex h-7 items-center justify-center whitespace-nowrap rounded-md border-2 border-solid px-1.5 py-3.5 text-sm font-medium transition-all duration-300 sm:h-6">
-      <span :class="isCardShown === false ? `i-lucide:mail` : `i-lucide:mail-x`" />
+    <button
+      @click="toggleCard()"
+      class="bg-$vp-c-default-soft text-primary border-$vp-c-default-soft hover:border-primary ml-3 inline-flex h-7 items-center justify-center whitespace-nowrap rounded-md border-2 border-solid px-1.5 py-3.5 text-sm font-medium transition-all duration-300 sm:h-6"
+    >
+      <span
+        :class="isCardShown === false ? `i-lucide:mail` : `i-lucide:mail-x`"
+      />
     </button>
   </template>
   <template v-else>
     <div
-      class="mt-2 p-4 border-2 border-solid bg-brand-50 border-brand-300 dark:bg-brand-950 dark:border-brand-800 rounded-xl col-span-3 transition-colors duration-250">
+      class="mt-2 p-4 border-2 border-solid bg-brand-50 border-brand-300 dark:bg-brand-950 dark:border-brand-800 rounded-xl col-span-3 transition-colors duration-250"
+    >
       <div class="flex items-start md:items-center gap-3">
         <div class="pt-1 md:pt-0">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center bg-brand-500 dark:bg-brand-400">
-            <span :class="isCardShown === false
-                ? `i-lucide:mail w-6 h-6 text-white dark:text-brand-950`
-                : `i-lucide:mail-x w-6 h-6 text-white dark:text-brand-950`
-              " />
+          <div
+            class="w-10 h-10 rounded-full flex items-center justify-center bg-brand-500 dark:bg-brand-400"
+          >
+            <span
+              :class="
+                isCardShown === false
+                  ? `i-lucide:mail w-6 h-6 text-white dark:text-brand-950`
+                  : `i-lucide:mail-x w-6 h-6 text-white dark:text-brand-950`
+              "
+            />
           </div>
         </div>
-        <div class="flex-grow flex items-start md:items-center gap-3 flex-col md:flex-row">
+        <div
+          class="flex-grow flex items-start md:items-center gap-3 flex-col md:flex-row"
+        >
           <div class="flex-grow">
             <div class="font-semibold text-brand-950 dark:text-brand-50">
               Got feedback?
@@ -163,7 +175,8 @@ const toggleCard = () => (isCardShown.value = !isCardShown.value)
           <div>
             <button
               class="inline-block text-center rounded-full px-4 py-2.5 text-sm font-medium border-2 border-solid text-brand-700 border-brand-300 dark:text-brand-100 dark:border-brand-800"
-              @click="toggleCard()">
+              @click="toggleCard()"
+            >
               Share Feedback
             </button>
           </div>
@@ -173,17 +186,22 @@ const toggleCard = () => (isCardShown.value = !isCardShown.value)
   </template>
 
   <Transition name="fade" mode="out-in">
-    <div v-if="isCardShown"
-      class="border-$vp-c-divider bg-$vp-c-bg-alt b-rd-4 m-[2rem 0] mt-4 border-2 border-solid p-6">
+    <div
+      v-if="isCardShown"
+      class="border-$vp-c-divider bg-$vp-c-bg-alt b-rd-4 m-[2rem 0] mt-4 border-2 border-solid p-6"
+    >
       <Transition name="fade" mode="out-in">
         <div v-if="!feedback.type">
           <p class="heading">
             {{ helpfulText }}
           </p>
           <div class="flex flex-wrap gap-2">
-            <button v-for="item in feedbackOptions" :key="item.value"
+            <button
+              v-for="item in feedbackOptions"
+              :key="item.value"
               class="bg-bg border-$vp-c-default-soft hover:border-primary mt-2 select-none rounded border-2 border-solid font-bold transition-all duration-250 rounded-lg text-[14px] font-500 leading-normal m-0 px-3 py-1.5 text-center align-middle whitespace-nowrap"
-              @click="handleSubmit(item.value)">
+              @click="handleSubmit(item.value)"
+            >
               <span>{{ item.label }}</span>
             </button>
           </div>
@@ -203,23 +221,30 @@ const toggleCard = () => (isCardShown.value = !isCardShown.value)
               <strong>🕹️ Emulators</strong>
               <p class="desc">
                 They're already on the
-                <a class="text-primary text-underline font-bold"
-                  href="https://emulation.gametechwiki.com/index.php/Main_Page">
+                <a
+                  class="text-primary text-underline font-bold"
+                  href="https://emulation.gametechwiki.com/index.php/Main_Page"
+                >
                   Game Tech Wiki.
                 </a>
               </p>
               <strong>🔻 Leeches</strong>
               <p class="desc">
                 They're already on the
-                <a class="text-primary text-underline font-bold"
-                  href="https://filehostlist.miraheze.org/wiki/Free_Premium_Leeches">
+                <a
+                  class="text-primary text-underline font-bold"
+                  href="https://filehostlist.miraheze.org/wiki/Free_Premium_Leeches"
+                >
                   File Hosting Wiki.
                 </a>
               </p>
               <strong>🐧 Distros</strong>
               <p class="desc">
                 They're already on
-                <a class="text-primary text-underline font-bold" href="https://distrowatch.com/">
+                <a
+                  class="text-primary text-underline font-bold"
+                  href="https://distrowatch.com/"
+                >
                   DistroWatch.
                 </a>
               </p>
@@ -234,25 +259,35 @@ const toggleCard = () => (isCardShown.value = !isCardShown.value)
               </p>
             </details>
           </div>
-          <textarea v-model="feedback.message" autofocus
+          <textarea
+            v-model="feedback.message"
+            autofocus
             class="bg-$vp-c-bg-alt text-$vp-c-text-2 w-full h-[100px] border border-$vp-c-divider rounded px-3 py-1.5 border-$vp-c-divider bg-$vp-c-bg-alt b-rd-4 border-2 border-solid"
-            placeholder="What a lovely wiki!" />
+            placeholder="What a lovely wiki!"
+          />
           <p class="desc mb-2">
             Add your Discord handle if you would like a response, or if we need
             more information from you, otherwise join our
-            <a class="text-primary text-underline font-semibold" href="https://rentry.co/FMHY-Invite/">
+            <a
+              class="text-primary text-underline font-semibold"
+              href="https://rentry.co/FMHY-Invite/"
+            >
               Discord.
             </a>
           </p>
           <div class="flex flex-row gap-2">
             <button
               class="bg-$vp-c-default-soft text-primary border-$vp-c-default-soft inline-flex h-7 items-center justify-center whitespace-nowrap rounded-md border-2 border-solid px-1.5 py-3.5 text-sm font-medium transition-all duration-300 sm:h-6"
-              @click="feedback.type = undefined">
+              @click="feedback.type = undefined"
+            >
               <span class="i-lucide:panel-left-close">close</span>
             </button>
-            <button type="submit"
+            <button
+              type="submit"
               class="border border-div rounded-lg transition-colors duration-250 inline-block text-14px font-500 leading-1.5 px-3 py-3 text-center align-middle whitespace-nowrap disabled:opacity-50 text-text-2 bg-brand-100 dark:bg-brand-700 border-brand-800 dark:border-brand-700 disabled:bg-brand-100 dark:disabled:bg-brand-900 hover:border-brand-900 dark:hover:border-brand-800 hover:bg-brand-200 dark:hover:bg-brand-800"
-              :disabled="isDisabled" @click="handleSubmit()">
+              :disabled="isDisabled"
+              @click="handleSubmit()"
+            >
               Send Feedback 📩
             </button>
           </div>

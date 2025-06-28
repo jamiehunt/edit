@@ -7,7 +7,8 @@ import ToggleStarred from './ToggleStarred.vue'
 
 <template>
   <div
-    class="bg-$vp-c-bg border-$vp-c-default-soft hover:border-primary transition-border relative z-0 rounded-lg border-2 border-solid p-5 duration-500">
+    class="bg-$vp-c-bg border-$vp-c-default-soft hover:border-primary transition-border relative z-0 rounded-lg border-2 border-solid p-5 duration-500"
+  >
     <div class="align-center mb-4 flex justify-between">
       <div class="text-$vp-c-text-1 lh-relaxed text-sm font-bold">
         Emoji Legend
@@ -24,14 +25,10 @@ import ToggleStarred from './ToggleStarred.vue'
         <ToggleStarred />
       </template>
     </InputField>
-    <InputField
-      id="icon-color"
-      label="Color"
-    >
+    <InputField id="icon-color" label="Color">
       <template #display>
-        <ColorPicker class="ml-auto"/>
+        <ColorPicker class="ml-auto" />
       </template>
     </InputField>
-
   </div>
 </template>

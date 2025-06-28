@@ -277,9 +277,9 @@ export const wikiSidebar = [
     items: [
       meta.build.nsfw
         ? {
-          text: '<span class="i-twemoji:no-one-under-eighteen"></span> NSFW',
-          link: 'https://rentry.co/NSFW-Checkpoint'
-        }
+            text: '<span class="i-twemoji:no-one-under-eighteen"></span> NSFW',
+            link: 'https://rentry.co/NSFW-Checkpoint'
+          }
         : {},
       {
         text: '<span class="i-twemoji:warning"></span> Unsafe Sites',

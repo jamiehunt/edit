@@ -85,21 +85,30 @@ const handleColorChange = (value: string) => {
         :style="{ backgroundColor: colors[selectedColor][500] }"
       />
     </div>
-    <SelectRoot :model-value="selectedColor" @update:model-value="handleColorChange">
-      <SelectTrigger
-        class="color-input-text"
-        aria-label="Select theme color">
+    <SelectRoot
+      :model-value="selectedColor"
+      @update:model-value="handleColorChange"
+    >
+      <SelectTrigger class="color-input-text" aria-label="Select theme color">
         <SelectValue :placeholder="normalizeColorName(selectedColor)" />
       </SelectTrigger>
 
       <SelectPortal>
-        <SelectContent class="bg-bg-elv border border-div rounded-md shadow-lg z-50 max-h-60 overflow-hidden z-9999"
-          :side-offset="4">
+        <SelectContent
+          class="bg-bg-elv border border-div rounded-md shadow-lg z-50 max-h-60 overflow-hidden z-9999"
+          :side-offset="4"
+        >
           <SelectViewport class="p-1">
-            <SelectItem v-for="color in colorOptions" :key="color" :value="color"
-              class="relative flex items-center gap-2 px-3 py-2 text-sm cursor-pointer hover:bg-bg-alt rounded-sm outline-none data-[highlighted]:bg-bg-alt data-[state=checked]:bg-bg-alt data-[state=checked]:text-text">
-              <span class="inline-block w-4 h-4 rounded-full border border-div"
-                :style="{ backgroundColor: colors[color][500] }" />
+            <SelectItem
+              v-for="color in colorOptions"
+              :key="color"
+              :value="color"
+              class="relative flex items-center gap-2 px-3 py-2 text-sm cursor-pointer hover:bg-bg-alt rounded-sm outline-none data-[highlighted]:bg-bg-alt data-[state=checked]:bg-bg-alt data-[state=checked]:text-text"
+            >
+              <span
+                class="inline-block w-4 h-4 rounded-full border border-div"
+                :style="{ backgroundColor: colors[color][500] }"
+              />
               <SelectItemText>
                 {{ normalizeColorName(color) }}
               </SelectItemText>
@@ -158,10 +167,13 @@ const handleColorChange = (value: string) => {
   text-align: left;
   border-radius: 8px;
   cursor: text;
-  transition: border-color 0.25s, background 0.4s ease;
+  transition:
+    border-color 0.25s,
+    background 0.4s ease;
 }
 
-.color-picker:hover, .color-picker:focus {
+.color-picker:hover,
+.color-picker:focus {
   border-color: var(--vp-c-brand);
   background: var(--vp-c-bg-alt);
 }
