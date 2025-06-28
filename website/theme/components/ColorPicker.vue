@@ -33,7 +33,7 @@ const selectedColor = useStorage<ColorNames>('preferred-color', 'swarm')
 
 const colorOptions = Object.keys(colors).filter(
   (key) => typeof colors[key as keyof typeof colors] === 'object'
-)
+) as ColorNames[]
 
 const { css } = useStyleTag('', { id: 'brand-color' })
 
@@ -79,16 +79,17 @@ const handleColorChange = (value: string) => {
 
 <template>
   <div class="color-picker">
+    <div class="color-input-wrapper">
+      <div
+        class="color-preview"
+        :style="{ backgroundColor: colors[selectedColor][500] }"
+      />
+    </div>
     <SelectRoot :model-value="selectedColor" @update:model-value="handleColorChange">
       <SelectTrigger
-        class="inline-flex items-center justify-between px-3 py-2 text-sm bg-bg-alt border border-div rounded-md hover:bg-bg-elv transition-colors min-w-[180px] mx-auto align-left"
+        class="color-input-text"
         aria-label="Select theme color">
-        <div class="flex items-center gap-2">
-          <span class="inline-block w-4 h-4 rounded-full border border-div"
-            :style="{ backgroundColor: colors[selectedColor][500] }" />
-          <SelectValue :placeholder="normalizeColorName(selectedColor)" />
-        </div>
-        <span class="i-lucide:chevron-down w-4 h-4 text-text-2" />
+        <SelectValue :placeholder="normalizeColorName(selectedColor)" />
       </SelectTrigger>
 
       <SelectPortal>
@@ -112,3 +113,56 @@ const handleColorChange = (value: string) => {
     </SelectRoot>
   </div>
 </template>
+
+<style scoped>
+.color-preview {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
+  flex-shrink: 0;
+}
+
+.color-input-wrapper {
+  height: 24px;
+  width: 24px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.color-picker {
+  background: var(--color-picker-bg, var(--vp-c-bg-alt));
+  border-radius: 8px;
+  color: var(--vp-c-text-2);
+  padding: 4px 8px;
+  height: auto;
+  font-size: 14px;
+  text-align: left;
+  border: 1px solid transparent;
+  cursor: text;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.color-input-text {
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 8px;
+  border: none;
+  background: transparent;
+  color: var(--vp-c-text-1);
+  font-size: 14px;
+  text-align: left;
+  border-radius: 8px;
+  cursor: text;
+  transition: border-color 0.25s, background 0.4s ease;
+}
+
+.color-picker:hover, .color-picker:focus {
+  border-color: var(--vp-c-brand);
+  background: var(--vp-c-bg-alt);
+}
+</style>

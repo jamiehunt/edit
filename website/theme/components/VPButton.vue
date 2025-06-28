@@ -140,7 +140,7 @@ const processedItems = computed(() => {
         <slot>{{ text }}</slot>
       </component>
       <button
-        class="bg-$vp-c-default-soft text-text border-$vp-c-default-soft hover:border-primary ml-3 inline-flex h-8 items-center justify-center whitespace-nowrap rounded-md border-2 border-solid px-2.5 py-4.5 text-md font-medium transition-all duration-300 sm:h-7 VPButtonTrigger"
+        class="bg-$vp-c-default-soft text-text border-$vp-c-default-soft hover:bg-$vp-c-default-hover active:bg-$vp-c-default-active inline-flex items-center justify-center whitespace-nowrap rounded-md border-2 border-solid px-2.5 py-5 text-md font-medium sm:h-7 VPButtonTrigger"
         @click="toggleDropdown" :aria-expanded="isDropdownOpen" aria-label="Toggle dropdown menu">
         <span class="i-lucide:menu"></span>
       </button>
@@ -200,21 +200,16 @@ const processedItems = computed(() => {
 }
 
 .VPButton.brand {
-  border-color: var(--vp-button-brand-border);
-  color: var(--vp-button-brand-text);
-  background-color: var(--vp-button-brand-bg);
+  color: var(--vp-c-text-1);
+  background-color: var(--vp-c-default-soft);
 }
 
 .VPButton.brand:hover {
-  border-color: var(--vp-button-brand-hover-border);
-  color: var(--vp-button-brand-hover-text);
-  background-color: var(--vp-button-brand-hover-bg);
+  background-color: var(--vp-c-default-hover);
 }
 
 .VPButton.brand:active {
-  border-color: var(--vp-button-brand-active-border);
-  color: var(--vp-button-brand-active-text);
-  background-color: var(--vp-button-brand-active-bg);
+  background-color: var(--vp-c-default-active);
 }
 
 .VPButton.alt {
@@ -265,9 +260,16 @@ const processedItems = computed(() => {
 }
 
 .VPButtonMain {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right: none;
+  --uno: border-2 border-$vp-c-default-soft;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.VPButtonTrigger {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-left: none !important;
+  margin-left: 0 !important;
 }
 
 .VPButtonDropdownMenu {

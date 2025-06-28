@@ -24,7 +24,14 @@ import ToggleStarred from './ToggleStarred.vue'
         <ToggleStarred />
       </template>
     </InputField>
+    <InputField
+      id="icon-color"
+      label="Color"
+    >
+      <template #display>
+        <ColorPicker class="ml-auto"/>
+      </template>
+    </InputField>
 
-    <ColorPicker />
   </div>
 </template>
