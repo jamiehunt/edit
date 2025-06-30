@@ -204,6 +204,7 @@ export function transform(text: string): string {
     .replace(/.25BA_/g, '')
     .replace(/.25B7_/g, '')
     .replace(/_.2F_/g, '-')
+    .replace(/_?.26amp.3B_?/g, '-')
 
   _text = replaceUnderscore(_text)
     .replace(/\/#(\d)/g, '/#_$1') // Prefix headings starting with numbers
@@ -215,7 +216,6 @@ export function transform(text: string): string {
     .replace(/## ▷/g, '###')
     .replace(/####/g, '###')
     // Replace emojis
-    .replace(/🌟/g, ':glowing-star:')
     .replace(/⭐/g, ':star:')
     .replace(/🌐/g, ':globe-with-meridians:')
     .replace(/↪/g, ':repeat-button:')
