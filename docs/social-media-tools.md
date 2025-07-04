@@ -266,13 +266,13 @@
 ## ▷ Telegram Clients
 
 * ↪️ **[Android Telegram Clients](https://www.reddit.com/r/FREEMEDIAHECKYEAH/wiki/storage#wiki_android_telegram_clients)**
-* ⭐ **[Telegram WebK](https://webk.telegram.org/)** / [Telegram WebA](https://weba.telegram.org/) - Web Apps
+* ⭐ **[AyuGram](https://docs.ayugram.one/desktop/)** - Desktop Client / [Chat](https://t.me/ayugramchat) / [Telegram](https://t.me/ayugram) / [GitHub](https://github.com/AyuGram/AyuGramDesktop)
 * ⭐ **[Materialgram](https://kukuruzka165.github.io/materialgram/)** - Desktop Client / Portable
 * ⭐ **[Unigram](https://github.com/UnigramDev/Unigram)** - Desktop Client
+* ⭐ **[Telegram WebK](https://webk.telegram.org/)** / [Telegram WebA](https://weba.telegram.org/) - Web Apps
 * [TDesktop](https://github.com/Forkgram/tdesktop) - Desktop Client
 * [TDesktop x64](https://github.com/TDesktop-x64/tdesktop) - Desktop Client / [Telegram](https://t.me/tg_x64)
 * [VideoGram](https://vidogram.org/) - Desktop Client
-* [AyuGram](https://docs.ayugram.one/desktop/) - Desktop Client / [GitHub](https://github.com/AyuGram/AyuGramDesktop)
 * [Pyrogram](https://docs.pyrogram.org/) - Telegram API Client
 * [Telega.el](https://github.com/zevlg/telega.el) - Telegram Emacs Client
 * [VanillaTG](https://t.me/VanillaTG) - Client Themes
@@ -374,7 +374,6 @@
 * [Walrus](https://joinwalrus.tv/), [Sync-Tube](https://sync-tube.de/), [YouTube Party](https://youtubeparty.netlify.app/) or [Hergetto](https://hergetto.live/) - YouTube Watch Parties
 * [TwitchTheater](https://twitchtheater.tv/), [VidGrid](https://vidgrid.tk.gg/), [YouTube Multiplier](https://www.youtubemultiplier.com/) or [ViewSync](https://viewsync.net/) - Watch Multiple YouTube Videos
 * [YouTube Clone KMP](https://github.com/KhubaibKhan4/Youtube-Clone-KMP) - YouTube Frontend
-* [Poke](https://poketube.fun/) - YouTube Frontend
 * [Piped](https://piped.video/) / [2](https://piped.kavin.rocks/) / [3](https://piped-material.১.net/) - YouTube Frontend / Sign-Up Required / [GitHub](https://github.com/TeamPiped/Piped)
 * [Tube Cadence](https://tube.cadence.moe/) - YouTube Frontend
 * [youtube-local](https://github.com/user234683/youtube-local) or [yt-local](https://git.sr.ht/~heckyel/yt-local) - YouTube Frontend
