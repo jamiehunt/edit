@@ -112,7 +112,7 @@ export default defineConfig({
         {
           find: /^.*VPLocalSearchBox.vue$/,
           replacement: fileURLToPath(
-            new URL('./theme/components/Search.vue', import.meta.url)
+            new URL('../../website/theme/components/Search.vue', import.meta.url)
           )
         }
       ]

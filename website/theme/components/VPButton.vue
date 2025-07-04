@@ -145,7 +145,7 @@ const processedItems = computed(() => {
         <slot>{{ text }}</slot>
       </component>
       <button
-        class="bg-$vp-c-default-soft text-text border-$vp-c-default-soft hover:bg-$vp-c-default-hover active:bg-$vp-c-default-active inline-flex items-center justify-center whitespace-nowrap rounded-md border-2 border-solid px-2.5 py-5 text-md font-medium sm:h-7 VPButtonTrigger"
+        class="bg-$vp-c-default-soft text-text border-$vp-c-default-soft hover:bg-$vp-c-default-hover active:bg-$vp-c-default-active inline-flex items-center justify-center whitespace-nowrap rounded-md border-2 border-solid text-md font-medium VPButtonTrigger p-2"
         @click="toggleDropdown"
         :aria-expanded="isDropdownOpen"
         aria-label="Toggle dropdown menu"
