@@ -108,6 +108,12 @@ export default defineConfig({
               import.meta.url
             )
           )
+        },
+        {
+          find: /^.*VPLocalSearchBox.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/Search.vue', import.meta.url)
+          )
         }
       ]
     },
